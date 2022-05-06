@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body{
+    margin: 0;
+    padding: 0;
+}
+/* navigationsbaren */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+/* titel */
+.hemnamn{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+ 
+li{
+    display:inline-block;
+}
+/* knapparna i navbaren */
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+/* tar bort onödiga style */
+.navbar-links li{
+    list-style: none;
+}
+/* tar bort onödiga style och sätter utrymme mellan */
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+/* animation vid använding */
+.navbar-links li:hover{
+    background-color: #555;
+}
+/* sökfält */
+
+/* placering på sökfältet */
+.nav-search{
+    margin-top: 15px;
+}
+
+/* man i kostyn */
+.man_i_kostym {
+    height: auto;
+    width: 40vw;
+    margin-left: 22%;
+
+}
+
+/* Loggan */
+.Logo{
+    height: 50px;
+    width: 55px;
+    margin-left: 70%;
+    position: absolute;
+    bottom: 38%;
+}
+
+/* custom suits titel*/
+.top_title{
+    margin-left: 61%;
+    font-size: 4vw; height: 100px;
+    position:absolute;
+    bottom: 45%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* röda knappen för köp*/
+input[type=submit] {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 72%;
+    position:absolute;
+    bottom: 50%;
+    border-radius: 20px;
+}
+
+/* paragrafen*/
+.paragraf{
+    position:absolute;
+    margin-left: 65%;
+    bottom: 27%;
+
+}
+
+/* priset*/
+.pris{
+    margin-left: 63%;
+    position:absolute;
+    bottom: 48%;
+}
+
+
+/* utseende på hamburger meny */
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+/* hamburger bars */
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+/* när resolutionen når 600px eller mindre då gäller dessa regler */
+@media (max-width: 600px){
+    .toggle-button{
+        display: flex;
+    }
+ 
+    .man_i_kostym{
+        margin-left: 10px;
+    }
+
+    .Logo{
+        margin: unset;
+        right: 29%;
+    }
+    
+    .top_title{
+        margin: unset;
+        bottom: 60vw;
+        right: 20vw;
+    }
+
+    input[type=submit] {
+        margin:unset;
+        bottom: 65vw;
+        right: 20vw;
+    }
+    .pris{
+        margin-left: unset;
+        bottom: 53vw;
+        right: 25vw;
+    }
+
+    .paragraf{
+        margin: unset;
+        bottom: 30vw;
+        right: 30px;
+    }
+
+    .navbar-links{
+       display: none;
+       width: 100%;
+    }
+ 
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+ 
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+ 
+    .navbar-links li{
+        text-align: center;
+    }
+ 
+    .navbar-links.active{
+        display: flex;
+    }
+}
